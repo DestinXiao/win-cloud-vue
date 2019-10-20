@@ -1,19 +1,25 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+    <div class="video" style="position: fixed; top: 0;left: 0;width: 100%;height:100%;z-index: -11" >
+      <video id="video" @contextmenu.prevent="" class="video" style="min-width: 100%;height: 100%;object-fit: fill" autoplay="autoplay" loop="loop" src="//qzonestyle.gtimg.cn/qz-proj/wy-pc-v3/static/img/web/top.webm">
+      </video>
+    </div>
+    <Login />
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-
+import Login from "./components/Login";
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Login
   }
+
 }
+
 </script>
 
 <style>
